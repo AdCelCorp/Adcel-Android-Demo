@@ -28,6 +28,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'co.adcel.android:adcel-banner:1.0.2'
-    compile 'co.adcel.android:adcel-interstitial:1.0.2'
+    compile 'co.adcel.android:adcel-banner:1.+'
+    compile 'co.adcel.android:adcel-interstitial:1.+'
 }

@@ -1,7 +1,7 @@
 package co.adcel.sdkdemo;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
@@ -9,7 +9,7 @@ import android.widget.Toast;
 import co.adcel.init.AdCel;
 import co.adcel.interstitialads.DefaultInterstitialListener;
 
-public class AnotherActivity extends AppCompatActivity {
+public class AnotherActivity extends Activity {
     static final String TAG = "AdCelSDKDemo";
 
     private DefaultInterstitialListener adcelInterstitialListener = new DefaultInterstitialListener() {
@@ -63,14 +63,21 @@ public class AnotherActivity extends AppCompatActivity {
 
             return false;
         }
+
+        @Override
+        public void onInterstitialFailLoad(String adType, String provider) {
+            Log.d(TAG, "onInterstitialFailLoad");
+            Toast toast = Toast.makeText(AnotherActivity.this,
+                    String.format("onInterstitialFailLoad %s %s", adType, provider),
+                    Toast.LENGTH_SHORT);
+            toast.show();
+        }
     };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_another);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         AdCel.setInterstitialListener(adcelInterstitialListener);
     }
 

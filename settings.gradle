@@ -1,1 +1,1 @@
-include ':AdcelInterstitialBanner', ':AdcelRewarded', ':AdcelNative'
+include ':AdcelInterstitialBanner', ':AdcelRewarded', ':AdcelNative', ':AdCelSDK-1.0.7'

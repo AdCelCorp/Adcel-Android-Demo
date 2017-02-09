@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     static final String TAG = "AdCelSDKDemo";
     static final String ADCEL_SDK_KEY =
-            "0a22dac7-5e69-4078-b7e7-034d2380b243:b507278d-1b28-4c46-8366-af8c9e9dd6a1";
+            "89fdf849-b5bc-49d0-ad51-0b790e777ae4:fc7094bb-3ca7-4450-9a7e-320b6b4f4e42";
 
     private TextView sdkStateTextView;
     private TextView coinsTextView;
@@ -87,6 +87,15 @@ public class MainActivity extends AppCompatActivity {
 
             coins++;
             refreshCoins();
+        }
+
+        @Override
+        public void onInterstitialFailLoad(String adType, String provider) {
+            Log.d(TAG, "onInterstitialFailLoad");
+            Toast toast = Toast.makeText(MainActivity.this,
+                    String.format("onInterstitialFailLoad %s %s", adType, provider),
+                    Toast.LENGTH_SHORT);
+            toast.show();
         }
     };
 

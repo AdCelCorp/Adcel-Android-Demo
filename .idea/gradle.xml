@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/AdCelSDK-1.0.7" />
             <option value="$PROJECT_DIR$/AdcelInterstitialBanner" />
             <option value="$PROJECT_DIR$/AdcelNative" />
             <option value="$PROJECT_DIR$/AdcelRewarded" />

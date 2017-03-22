@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AdCelSDK-1.0.7/AdCelSDK-1.0.7.iml" filepath="$PROJECT_DIR$/AdCelSDK-1.0.7/AdCelSDK-1.0.7.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelInterstitialBanner/AdcelInterstitialBanner.iml" filepath="$PROJECT_DIR$/AdcelInterstitialBanner/AdcelInterstitialBanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelNative/AdcelNative.iml" filepath="$PROJECT_DIR$/AdcelNative/AdcelNative.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelRewarded/AdcelRewarded.iml" filepath="$PROJECT_DIR$/AdcelRewarded/AdcelRewarded.iml" />

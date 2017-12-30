@@ -20,6 +20,7 @@ import java.util.List;
 
 import co.adcel.init.AdCel;
 import co.adcel.nativeads.AdCelNative;
+import co.adcel.nativeads.MediaLayout;
 import co.adcel.nativeads.NativeAd;
 import co.adcel.nativeads.NativeAdView;
 import co.adcel.nativeads.OnNativeAdsAvailabilityListener;
@@ -84,7 +85,8 @@ public class MainActivity extends AppCompatActivity {
 
         AdCel.loadNativeAd(this, new AdCelNative.AdLoadListener() {
             @Override
-            public void onLoadAd(final NativeAd ad, String provider) {
+            public void onLoadAd(List<NativeAd> list, String s) {
+                NativeAd ad = list.get(0);
                 // Use object ad for display Native advertising
                 ads.add(ad);
 
@@ -177,9 +179,17 @@ public class MainActivity extends AppCompatActivity {
                 view.setTitleView(view.findViewById(R.id.title));
                 view.setDescriptionTextView(view.findViewById(R.id.text));
                 view.setIconView(view.findViewById(R.id.icon));
-                view.setImageView(view.findViewById(R.id.image));
+                view.setMediaLayout((MediaLayout) view.findViewById(R.id.media));
                 view.setStarRaitingView(view.findViewById(R.id.rating));
                 view.setCtaTextView(view.findViewById(R.id.installButton));
+
+                view.setOnAdClickListener(new NativeAdView.OnAdClickListener() {
+                    @Override
+                    public void onAdClick(NativeAdView nativeAdView) {
+                        Toast.makeText(MainActivity.this, "Native Ad clicked", Toast.LENGTH_SHORT)
+                                .show();
+                    }
+                });
 
                 fillNativeAdView(view, ad);
 
@@ -200,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
             ((TextView)view.getDescriptionTextView()).setText(ad.getDescriptionText());
             ImageLoader imageLoader = ImageLoader.getInstance();
             imageLoader.displayImage(ad.getIconUrl(), (ImageView) view.getIconView());
-            imageLoader.displayImage(ad.getImageUrl(), (ImageView) view.getImageView());
+            imageLoader.displayImage(ad.getImageUrl(), (ImageView) view.getMediaLayout().getImageView());
             ((TextView)view.getStarRaitingView()).setText("Rating " + String.valueOf(ad.getStarRaiting()));
 
             if (ad.getCtaText() != null) {

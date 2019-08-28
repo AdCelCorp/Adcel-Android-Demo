@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Adcel-Android-Demo.iml" filepath="$PROJECT_DIR$/.idea/Adcel-Android-Demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AdCelMoPubAdapter/AdCelMoPubAdapter.iml" filepath="$PROJECT_DIR$/AdCelMoPubAdapter/AdCelMoPubAdapter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Adcel-Android-Demo.iml" filepath="$PROJECT_DIR$/Adcel-Android-Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelInterstitialBanner/AdcelInterstitialBanner.iml" filepath="$PROJECT_DIR$/AdcelInterstitialBanner/AdcelInterstitialBanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelNative/AdcelNative.iml" filepath="$PROJECT_DIR$/AdcelNative/AdcelNative.iml" />
       <module fileurl="file://$PROJECT_DIR$/AdcelRewarded/AdcelRewarded.iml" filepath="$PROJECT_DIR$/AdcelRewarded/AdcelRewarded.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AdcelSDKDemo.iml" filepath="$PROJECT_DIR$/AdcelSDKDemo.iml" />
     </modules>
   </component>
 </project>

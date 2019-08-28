@@ -1,1 +1,1 @@
-include ':AdcelInterstitialBanner', ':AdcelRewarded', ':AdcelNative'
+include ':AdcelInterstitialBanner', ':AdcelRewarded', ':AdcelNative', ':AdCelMoPubAdapter'
